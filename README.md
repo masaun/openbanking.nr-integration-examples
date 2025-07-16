@@ -1,3 +1,16 @@
+# OpenBanking.nr Integration Examples
+
+# Overview
+
+- This repo is the experimental repo to test the integrations with the `OpenBanking.nr` library:
+  - `openbanking.nr-circuit`: https://github.com/attested-frontiers/openbanking.nr-circuit
+  - `openbanking.nr-server` (API server for `OpenBanking API`): https://github.com/attested-frontiers/openbanking.nr-server
+
+
+<br>
+
+<hr>
+
 # Noir + Hardhat Template 🚀
 
 A comprehensive boilerplate that seamlessly integrates [Noir](https://noir-lang.org/) zero-knowledge circuits with [Hardhat](https://hardhat.org/) for Ethereum smart contract development. This template provides everything you need to build, test, and deploy ZK applications with enterprise-grade CI/CD pipelines.
