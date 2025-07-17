@@ -6,6 +6,14 @@
   - `openbanking.nr-circuit`: https://github.com/attested-frontiers/openbanking.nr-circuit
   - `openbanking.nr-server` (API server for `OpenBanking API`): https://github.com/attested-frontiers/openbanking.nr-server
 
+<br>
+
+## Run the ZK circuit test
+
+```bash
+cd circuit
+sh sh circuit_test.sh
+```
 
 <br>
 
