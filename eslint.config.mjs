@@ -15,7 +15,7 @@ export default [
       '**/typechain-types/**',
       '**/cache/**',
       '**/artifacts/**',
-      'circuit/target/**',
+      'circuits/target/**',
       'ignition/deployments/**',
       '*.config.js',
       '*.config.ts',
