@@ -3,9 +3,9 @@ import { expect } from 'chai';
 import hre from 'hardhat';
 import { UltraHonkBackend } from '@aztec/bb.js';
 import { CompiledCircuit, Noir } from '@noir-lang/noir_js';
-import main from '../circuit/target/num_diff.json';
-import proofJson from '../circuit/target/proof_fields.json';
-import publicInputsJson from '../circuit/target/public_inputs_fields.json';
+import main from '../circuits/target/num_diff.json';
+import proofJson from '../circuits/target/proof_fields.json';
+import publicInputsJson from '../circuits/target/public_inputs_fields.json';
 import path from 'path';
 import fs from 'fs';
 
@@ -63,6 +63,7 @@ describe('SimpleCounter', function () {
     beforeEach(async function () {
       this.fixtureVariables = await loadFixture(deploySimpleCounterFixture);
     });
+    
     describe('reading from jsons', function () {
       it.only('should validate proof and update the counter', async function () {
         const { backend, simpleCounter } = this.fixtureVariables as {
@@ -93,6 +94,7 @@ describe('SimpleCounter', function () {
         expect(currentCounter).to.equal(1n);
       });
     });
+
     describe('reading from bytes', function () {
       it('should validate proof and update the counter', async function () {
         const { backend, simpleCounter } = this.fixtureVariables as {
@@ -103,11 +105,11 @@ describe('SimpleCounter', function () {
         let currentCounter = await simpleCounter.read.counter();
         expect(currentCounter).to.equal(0n);
 
-        const proofBuffer = fs.readFileSync(path.join(__dirname, '../circuit/target/proof'));
+        const proofBuffer = fs.readFileSync(path.join(__dirname, '../circuits/target/proof'));
         const proof = '0x' + proofBuffer.toString('hex');
 
         const publicInputsBuffer = fs.readFileSync(
-          path.join(__dirname, '../circuit/target/public_inputs')
+          path.join(__dirname, '../circuits/target/public_inputs')
         );
         const publicInputsArray = Array.from(
           { length: Math.floor(publicInputsBuffer.length / 32) },

@@ -12,7 +12,7 @@ cache/
 artifacts/
 
 # Circuit build files
-circuit/target/
+circuits/target/
 
 # Ignition deployments
 ignition/deployments/

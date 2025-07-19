@@ -11,7 +11,7 @@
 ## Run the ZK circuit test
 
 ```bash
-cd circuit
+cd circuits
 sh sh circuit_test.sh
 ```
 
