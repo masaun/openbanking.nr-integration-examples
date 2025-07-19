@@ -63,6 +63,7 @@ describe('SimpleCounter', function () {
     beforeEach(async function () {
       this.fixtureVariables = await loadFixture(deploySimpleCounterFixture);
     });
+    
     describe('reading from jsons', function () {
       it.only('should validate proof and update the counter', async function () {
         const { backend, simpleCounter } = this.fixtureVariables as {
@@ -93,6 +94,7 @@ describe('SimpleCounter', function () {
         expect(currentCounter).to.equal(1n);
       });
     });
+
     describe('reading from bytes', function () {
       it('should validate proof and update the counter', async function () {
         const { backend, simpleCounter } = this.fixtureVariables as {
