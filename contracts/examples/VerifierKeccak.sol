@@ -2,6 +2,12 @@
 // Copyright 2022 Aztec
 pragma solidity >=0.8.21;
 
+// [main.nr]:
+//
+// fn main(x: Field, y: pub Field, z: pub Field) {
+//     assert((x != y) & (y != z));
+// }
+
 uint256 constant N = 32;
 uint256 constant LOG_N = 5;
 uint256 constant NUMBER_OF_PUBLIC_INPUTS = 2;

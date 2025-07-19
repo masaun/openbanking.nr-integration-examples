@@ -3,12 +3,22 @@ import { expect } from 'chai';
 import hre from 'hardhat';
 import { UltraHonkBackend } from '@aztec/bb.js';
 import { CompiledCircuit, Noir } from '@noir-lang/noir_js';
-import main from '../circuits/target/num_diff.json';
-import proofJson from '../circuits/target/proof_fields.json';
-import publicInputsJson from '../circuits/target/public_inputs_fields.json';
+import main from '../../circuits/target/num_diff.json';
+import proofJson from '../../circuits/target/proof_fields.json';
+import publicInputsJson from '../../circuits/target/public_inputs_fields.json';
 import path from 'path';
 import fs from 'fs';
 
+// [main.nr]:
+//
+// fn main(x: Field, y: pub Field, z: pub Field) {
+//     assert((x != y) & (y != z));
+// }
+
+
+/**
+ * @notice This test suite is designed to validate the functionality of the SimpleCounter contract.
+ */
 describe('SimpleCounter', function () {
   async function deploySimpleCounterFixture() {
     const noir = new Noir(main as CompiledCircuit);

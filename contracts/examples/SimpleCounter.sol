@@ -3,6 +3,17 @@ pragma solidity ^0.8.28;
 
 import { IVerifier } from "./VerifierKeccak.sol";
 
+
+// [main.nr]:
+//
+// fn main(x: Field, y: pub Field, z: pub Field) {
+//     assert((x != y) & (y != z));
+// }
+
+
+/**
+ * @title - SimpleCounter
+ */
 contract SimpleCounter {
     IVerifier public verifier;
     uint256 public counter;
