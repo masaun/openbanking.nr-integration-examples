@@ -30,6 +30,7 @@ describe('SimpleCounter', function () {
     beforeEach(async function () {
       this.fixtureVariables = await loadFixture(deploySimpleCounterFixture);
     });
+
     it('should generate several valid proofs and update the counter', async function () {
       const { noir, backend, simpleCounter } = this.fixtureVariables as {
         noir: Noir;
@@ -63,9 +64,10 @@ describe('SimpleCounter', function () {
     beforeEach(async function () {
       this.fixtureVariables = await loadFixture(deploySimpleCounterFixture);
     });
-    
+
     describe('reading from jsons', function () {
-      it.only('should validate proof and update the counter', async function () {
+      it('should validate proof and update the counter', async function () {        // @dev - Execute "all" tests by removing the ".only" option.  
+      //it.only('should validate proof and update the counter', async function () { // @dev - Execute "only" this test
         const { backend, simpleCounter } = this.fixtureVariables as {
           backend: UltraHonkBackend;
           simpleCounter: any;
