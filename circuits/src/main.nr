@@ -24,7 +24,7 @@ fn main(
     verify_age(dg1, min_age, max_age, current_date_bytes);
 
     // @dev - Verify a bank payment using the Open Banking Verifier.
-    let return_value = verify_bank_payment(params);
+    let openbanking_verifier_return = verify_bank_payment(params);
 
     //assert((x != y) & (y != z));
 }
