@@ -20,8 +20,11 @@ fn main(
     params: OpenbankingVerifierParams
     //x: Field, y: pub Field, z: pub Field
 ) {
-    
+    // @dev - Verify the age of a user using the ZK Passport Age Verifier.
+    verify_age(dg1, min_age, max_age, current_date_bytes);
 
-    
+    // @dev - Verify a bank payment using the Open Banking Verifier.
+    let return_value = verify_bank_payment(params);
+
     //assert((x != y) & (y != z));
 }
