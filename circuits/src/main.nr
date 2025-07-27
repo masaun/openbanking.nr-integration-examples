@@ -1,5 +1,6 @@
 mod openbanking;
 mod zkpassport;
+mod recursive_proof;
 mod tests;
 
 use openbanking::openbanking_integrator::{
@@ -9,6 +10,11 @@ use openbanking::openbanking_integrator::{
 
 use zkpassport::zkpassport_integrator::{
     verify_age
+};
+
+use recursive_proof::recursive_proof_generator::{
+    verify_recursive_proof,
+    SemaphoreProof
 };
 
 
