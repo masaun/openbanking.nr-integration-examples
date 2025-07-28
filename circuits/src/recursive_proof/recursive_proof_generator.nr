@@ -8,7 +8,7 @@ pub struct SemaphoreProof {
 }
 
 // Batch 2 Semaphore proofs into a single proof
-pub fn verify_recursive_proof(sp: [SemaphoreProof; 2]) -> pub Field {
+pub fn verify_recursive_proof(sp: [SemaphoreProof; 2]) -> Field {
     // Note that actual verification happens when this proof gets verified
     verify_proof(
         sp[0].verification_key,
