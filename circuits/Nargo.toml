@@ -16,3 +16,5 @@ sha256 = { tag = "v0.1.2", git = "https://github.com/noir-lang/sha256" } # This 
 # ZK Passport (NOTE: ZK Passport provide both "lib" and "bin". So, In this project, we import the "lib" of ZK Passport circuit repo)
 zkpassport_common = { tag = "main", git = "https://github.com/zkpassport/circuits", directory = "src/noir/lib/commitment/common" }
 zkpassport_age = { tag = "main", git = "https://github.com/zkpassport/circuits", directory = "src/noir/lib/compare/age" }
+#date = { tag = "v0.5.1", git = "https://github.com/madztheo/noir-date.git" }
+#u2b = { tag = "v0.4.0", git = "https://github.com/colinnielsen/noir-u2b" } # Noir/Nargo v1.0.0-beta.6 does not support this package, so we use the local version of u2b.nr instead.
