@@ -14,6 +14,9 @@ use openbanking::openbanking_integrator::{
 
 use zkemail::partial_hash::{partial_sha256_var_start, partial_sha256_var_end};
 
+//use dep::date::Date;
+//use dep::u2b;
+
 // @dev - TEST GLOBALS for the OpenbankingVerifierParams
 pub global TEST_HEADER_DELIMITER_INDEX_LENGTH: u32 = 431;
 pub global TEST_JWT_LENGTH: u32 = 1242;
@@ -23,11 +26,20 @@ pub global TEST_PH_START_PREIMAGE_LENGTH: u32 = 384;
 
 #[test]
 fn test_main() {
+    let timestamp: u32 = 1754561400; // e.g. 2025-08-07 15:30:00 UTC (= [72, 163, 140, 104, 0, 0, 0, 0])
+    let timestamp_field: Field = timestamp as Field;
+    let _current_date_bytes: [u8; 8] = timestamp_field.to_le_bytes();
+    //let date: Date = Date::from_timestamp(1754561400);
+    //let timestamp: u64 = 1754561400; // assuming this field exists
+    //let _current_date_bytes: [u8; 8] = timestamp.to_le_bytes(); // assuming this field exists
+    //let _current_date_bytes: [u8; 8] = u2b::u64_to_u8(timestamp);
+    println(f"_current_date_bytes: {_current_date_bytes}\n");
+
     // @dev - Input parameters for the main function
     let dg1: [u8; 95] = [0; 95];              // Example data, replace with actual test data
     let min_age: u8 = 18;                     // Example minimum age
     let max_age: u8 = 65;                     // Example maximum age
-    let current_date_bytes: [u8; 8] = [0; 8]; // Example current date
+    let current_date_bytes: [u8; 8] = _current_date_bytes; // Example current date
     let params: OpenbankingVerifierParams = test_openbanking_verifier_params(); // Function to create test params
 
     let proofs: [SemaphoreProof; 2] = [
