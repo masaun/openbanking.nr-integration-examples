@@ -42,20 +42,20 @@ fn test_main() {
     let current_date_bytes: [u8; 8] = _current_date_bytes; // Example current date
     let params: OpenbankingVerifierParams = test_openbanking_verifier_params(); // Function to create test params
 
-    let proofs: [SemaphoreProof; 2] = [
-        SemaphoreProof {
-            verification_key: [0; 128],
-            proof: [0; 456],
-            public_inputs: [0; 4],
-            key_hash: 0
-        },
-        SemaphoreProof {
-            verification_key: [0; 128],
-            proof: [0; 456],
-            public_inputs: [0; 4],
-            key_hash: 0
-        }
-    ];
+    // let proofs: [SemaphoreProof; 2] = [
+    //     SemaphoreProof {
+    //         verification_key: [0; 128],
+    //         proof: [0; 456],
+    //         public_inputs: [0; 4],
+    //         key_hash: 0
+    //     },
+    //     SemaphoreProof {
+    //         verification_key: [0; 128],
+    //         proof: [0; 456],
+    //         public_inputs: [0; 4],
+    //         key_hash: 0
+    //     }
+    // ];
 
     // @dev - Execute the main function with test parameters
     main(
@@ -63,8 +63,8 @@ fn test_main() {
         min_age, 
         max_age, 
         current_date_bytes, 
-        params,
-        proofs
+        params
+        //proofs
     );
 }
 
