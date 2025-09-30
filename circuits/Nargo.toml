@@ -20,4 +20,4 @@ zkpassport_age = { tag = "main", git = "https://github.com/zkpassport/circuits",
 #u2b = { tag = "v0.4.0", git = "https://github.com/colinnielsen/noir-u2b" } # Noir/Nargo v1.0.0-beta.6 does not support this package, so we use the local version of u2b.nr instead.
 
 # Semaphore-noir
-semaphore = { tag = "feat/specification-updates_for-using-as-library", git = "https://github.com/masaun/semaphore-noir", directory = "./packages/circuits-noir" }
+#semaphore = { tag = "feat/specification-updates_for-using-as-library", git = "https://github.com/masaun/semaphore-noir", directory = "./packages/circuits-noir" }
